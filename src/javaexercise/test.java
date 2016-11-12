@@ -49,7 +49,7 @@ public class test {
 		if(n<0)
 			n=256+n;//???why
 		int d1=n/16;
-		int d2=n%16;
+		int d2=n%16;//kkkkk
 		return hexDigits[d1]+hexDigits[d2];
 	}
 	public static void main(String[] args) throws IOException
