@@ -145,13 +145,30 @@ public class exercise1112 {
 		Method m=str.getClass().getMethod("toUpperCase");
 		System.out.println(m.invoke(str));
 		
-		Integer[] x={9,2,8,5,7,3};
+		Comparator<Integer> cmp=new Comparator<Integer>(){
+			public int compare(Integer x,Integer y)
+			{
+				if(x<y)
+					return 1;
+				return 0;
+			}
+			
+		};
+	
+		Integer[] x={
+				9,2,8,5,7,3};
 		List<Integer[]> il=new ArrayList<Integer[]>();
 		il.add(x);
 		BubbleSort x1=new BubbleSort();
-		x1.sort(x);
+		x1.sort(x,cmp);
 		for(Integer y:x)
 		   System.out.println(y);
+		
+		/*Integer[] qsortArray={9,34,6,2,14,0};
+		QuickSort qs=new QuickSort();
+		qs.qSort(qsortArray, 0, qsortArray.length-1);
+		for(Integer x:qsortArray)
+			System.out.print(x+" ");*/
 		
 		
 	}
